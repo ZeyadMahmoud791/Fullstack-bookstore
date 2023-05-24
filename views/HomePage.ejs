@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BOOKWORM</title>
+  <link href="/CSS/Homepage.css" rel="stylesheet" >
+</head>
+
+<body>
+<script src="/JAVASCRIPT/HP.js"></script>
+<header>
+  <div class="logot" onclick="window.location.href = '/HomePage';">
+    <img src="/Images/book.png" >
+    <h2 class="brandn">BOOKWORM</h2>
+  </div>
+
+  <div class="menuDiv circle">
+    <ul id="topMenu">
+      <li class="lt"><a href="/HomePage">Home</a></li>
+      <li><a href="/Categories">Categories</a></li>
+      <li><a href="/topSellers">Top Sellers</a></li>
+      <li><a href="/AboutUs">About us</a></li>
+      <li class="rt"><a href="/ContactUs">Contact us</a></li>
+    </ul>
+  </div>
+
+  <div class="profile">
+    <form>
+      <input class="search" type="text" name="Search" id="" placeholder="Search">
+      <button class="simg" type="submit"><img src="/Images/search.png" alt=""></button>
+    </form>
+    <% if (userId) { %> 
+      <div class="dropdown">
+        <a href="/profile"><img class="prof_photo" src="/Images/profile.png" alt="profile"></a>
+        <div class="dropdown-content">
+          <a class="t" href="/profile">Profile</a>
+          <a class="m" href="/SignOut">Sign Out</a>
+          <a class="b" href="/cart">Cart</a>
+        </div>
+      </div>
+      <div class="cart">
+        <a href="/cart"><img class="cart_photo" src="/Images/cart.png"></a>
+      </div>
+        <% } else { %>
+          <div class="dropdown">
+            <a href="#"><img class="prof_photo" src="/Images/profile.png" alt="profile"></a>
+            <div class="dropdown-content">
+              <a class="t" href="SignIn.html">Sign In</a>
+              <a class="b" href="SignUp.html">Sign Up</a>
+            </div>
+          </div>
+          <div class="cart">
+            <a href="#"><img class="cart_photo" src="/Images/cart.png"></a>
+          </div>
+          <% } %>
+  </div>
+ 
+</header>
+
+<main>
+  <div class="slideshow-container">
+
+    <div class="mySlides def-img">
+      <img class="fade" src="/Images/bookshop.jpg">
+      <div class="text">WELCOME TO BOOKWORM !</div>
+    </div>
+
+    <div class="mySlides">
+      <img class="fade" src="/Images/thrill mystery.jpg" style="width:100%">
+      <div class="text">Most Anticipated Mysteries & Thrillers of Summer 2022</div>
+    </div>
+
+    <div class="mySlides">
+      <img class="fade" src="/Images/selfhelp.jpg" style="width:100%">
+      <div class="text">Best Self-Help Books to Guide You on the Road to Self-Care</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <h2 class="title">Featured Books</h2>
+
+  <div class="Grid">
+    <div class="img-wrapper">
+      <img class="blur zoom" src="/Images/Horror.jpg">
+      <div class="content fade" onclick="window.location.href = '/HomePage';">IT</div>
+    </div>
+
+    <div class="img-wrapper">
+      <img class="blur zoom" src="/Images/ATTWN.jpg">
+      <div class="content fade" onclick="window.location.href = '/HomePage';">And Then There <br> &nbsp;&nbsp;&nbsp; Were None</div>
+    </div>
+
+    <div class="img-wrapper">
+      <img class="blur zoom" src="/Images/inj.jpg">
+      <div class="content fade" onclick="window.location.href = '/HomePage';">Injustice: Gods <br>&nbsp;&nbsp;&nbsp; Among Us</div>
+    </div>
+  </div>
+
+  <div class="Grid">
+    <div class="img-wrapper">
+      <img class="blur zoom" src="/Images/Manga.png">
+      <div class="content fade" onclick="window.location.href = '/HomePage';">Berserk</div>
+    </div>
+
+    <div class="img-wrapper">
+      <img class="blur zoom" src="/Images/093.jpg">
+      <div class="content fade" onclick="window.location.href = '/HomePage';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCP-093: <br> Red Sea Object</div>
+    </div>
+
+    <div class="img-wrapper">
+      <img class="blur zoom" src="/Images/Dune.jpg">
+      <div class="content fade" onclick="window.location.href = '/HomePage';">Dune</div>
+    </div>
+  </div>
+</main>
+
+
+<footer>
+  <div class="about">
+    <h4>ABOUT BOOKWORM</h4>
+    <p>BOOKWORM began as an idea to help support bookstores and their communities at a time when more and more people were
+      buying their books online. We saw an opportunity to create an alternative to Amazon for socially-conscious online
+      shoppers.</p>
+    <h3 class="cont">Telephone: +20 111 937 7388</h3>
+    <h3 class="cont">Email: support@Book.com</h3>
+  </div>
+  <div class="book">
+    <h4>BOOKWORM</h4>
+    <ul>
+      <li><a href="/HomePage">Home</a></li>
+      <li><a href="Categories">Categories</a></li>
+      <li><a href="AboutUs">About Us</a></li>
+      <li><a href="ContactUs">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="help">
+    <h4>HELP AND SUPPORT</h4>
+    <ul>
+      <li><a href="#">Customer Service</a></li>
+      <li><a href="#">Shipping</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">Terms Of Service</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: smaller;
+}
+
+body{
+  background-image: url("/Images/back.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+                                  /* ! HEADER CSS */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #CD853F; */
+  background-color: #000000;
+  color:#fff;
+}
+
+/* * START LOGO */
+.logot{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logot img{
+  width: 50px;
+  padding: 4%;
+}
+
+.logot h2{
+  padding-left: calc(1px + 0.6vw);
+  padding-right: calc(1px + 0.6vw);
+  font-size: calc(5px + 1.3vw);
+  font-weight: 600;
+}
+/* *END LOGO */
+
+/* * START NAVIGATION BAR */
+.menuDiv {
+  /* margin-left: 70px; */
+  margin-left: calc(7px + 8vw);
+  background-color: #000000;
+  color: #2e70a9;
+  border-radius: 10px;
+}
+
+.menuDiv ul {
+  display: flex;
+}
+.menuDiv ul li {
+  list-style: none;
+}
+
+.menuDiv ul li a {
+  color: rgb(255, 255, 255) ;
+  text-decoration: none;
+  padding: calc(3px + 1.12vw);
+  display:  flex;
+  align-content: center;
+  font-size: calc(2px + 1.1vw);
+  transition: ease-in-out all .3s;
+  text-align: center;
+}
+
+.menuDiv ul li a:hover {
+  color: #fff;
+  font-size: calc(4px + 1vw);
+  background: #2e70a9;
+}
+
+#topMenu .lt :hover {
+  color: #fff;
+  background: #2e70a9;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+#topMenu .rt :hover {
+  color: #fff;
+  background: #2e70a9;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+/* * END NAVIGATION BAR */
+
+/* * START PROFILE MENU */
+.profile , .cart {
+    /* background-color: chocolate; */
+    display: flex;
+    align-items:center;
+    justify-content:flex-end;
+  }
+  
+  .prof_photo {
+    width: calc(8px + 3vw);
+    padding-right: calc(0.5px + 1vw);
+    padding-left: calc(0.5px + 1vw);
+  }
+  
+  .cart_photo{
+    width: calc(8px + 3vw);
+    padding-right: calc(1px + 1vw);
+    cursor:pointer;  
+  }
+
+.profile form input {
+  width: calc(5px + 13vw);
+  height: calc(10px + 1.5vw);
+  border: 3px solid black;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: calc(5px + 1vw);
+  line-height: 3;
+}
+
+.profile form button {
+  background: #DC143C;
+  color: white;
+  border: 3px solid black;
+  border-left: none;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: calc(26px + 0.8vw);
+}
+
+.profile form button img{
+  width: calc(5px + 1.3vw);
+}
+
+.profile form {
+  display: flex;
+  padding-left: calc(1px + 0.6vw);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 10px;
+  margin-left: calc(2px + 0.5vw);
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: calc(1px + 0.5vw);
+  text-decoration: none;
+  display: block;
+  font-size: calc(4px + 0.8vw);
+}
+
+.dropdown-content .t:hover {
+  background-color: #2e70a9;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.dropdown-content .b:hover {
+  background-color: #2e70a9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* *END PROFILE MENU */
+
+                                          /* ! MAIN CSS */
+
+/* * START SLIDE SHOW */
+.slideshow-container {
+  /* max-width: 1000px; */
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.mySlides {
+  display: none;
+}
+
+.def-img{
+  display: block;
+}
+
+.mySlides img {
+  border-radius: 5px 5px 0 0;
+  width: calc(100% + 0.01vw);
+  height: auto;
+  aspect-ratio: 2.3/1.16;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  padding: calc(5px + 1.2vw);
+  color: white;
+  font-weight: bold;
+  font-size: calc(5px + 1.2vw);
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  background: linear-gradient(87.4deg, rgb(255, 241, 165) 1.9%, rgb(200, 125, 76) 49.7%, rgb(83, 54, 54) 100.5%);
+  color: black;
+  font-size: calc(7px + 1.1vw);
+  font-weight: 600;
+  position: relative;
+  bottom: 3px;
+  text-align: center;
+  padding: calc(15px + 1.1vw);
+  border-radius: 0 0 5px 5px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+/* * END SLIDE SHOW */
+
+/* * START BEST SELLERS  */
+.title {
+  background-color: #B22222;
+  text-align: center;
+  padding: calc(15px + 1.5vw);
+  font-size: calc(15px + 1vw);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: lighter;
+}
+
+.Grid{
+  display: flex;
+  justify-content: space-between;
+  margin: calc(5px + 5vw);
+}
+
+.img-wrapper img{
+  height: calc(20px + 30vw);
+  border-radius: 10px;
+}
+
+.img-wrapper{
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.img-wrapper > img{
+  display: block;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-wrapper > .content{
+  position: absolute;
+  inset: 0;
+  font-size: calc(10px + 1vw);
+  background: rgba(255, 255, 255, .4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+  transition: 300ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur {
+  transition: 300ms ease-in-out;
+  filter: blur(2px);
+}
+
+.img-wrapper:hover > img.zoom {
+  transform: scale(1.1);
+  transition: 300ms ease-in-out;
+}
+
+.img-wrapper > .content.fade {
+  opacity: 0;
+  display: none;
+}
+
+.img-wrapper:hover > .content.fade {
+  opacity: 10;
+  display: flex;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 300ms ease-in-out;
+}
+/* * END BEST SELLERS */
+
+                                            /* ! FOOTER CSS */
+
+                                            footer {
+                                              display: flex;
+                                              padding: calc(1px + 0.8vw);
+                                              justify-content: space-evenly;
+                                              background-color: #000000;
+                                              color:#fff;
+                                              position: relative;
+                                              /* top: 470px; */
+                                            }
+                                            
+                                            .about {
+                                              width: 30%;
+                                            }
+                                            
+                                            .about h4 {
+                                              margin: 2%;
+                                              text-align: center;
+                                              font-size: calc(10px + 0.8vw);
+                                              color: #FFF0F5;
+                                            }
+                                            
+                                            .about p {
+                                              padding-bottom: 5%;
+                                              text-align:justify;
+                                              color: #FFF0F5;
+                                              font-size: calc(5px + 0.6vw);
+                                              /* border: 2px solid black; */
+                                            }
+                                            
+                                            .cont {
+                                              color: #FFF0F5;
+                                              font-size: calc(8px + 0.6vw);
+                                            }
+                                            
+                                            .book,
+                                            .help{
+                                              display: flex;
+                                              flex-direction: column;
+                                              width: 30%;
+                                            }
+                                            
+                                            .book h4,
+                                            .help h4{
+                                              color: #FFF0F5;
+                                              margin: 2%;
+                                              font-size: calc(10px + 0.8vw);
+                                              text-align: center;
+                                            }
+                                            
+                                            .book ul,
+                                            .help ul{
+                                              align-self: center;
+                                            }
+                                            
+                                            .book ul li,
+                                            .help ul li{
+                                              list-style: none;
+                                              font-size: calc(7px + 0.9vw);
+                                              margin: calc(2px + 0.5vw);
+                                            }
+                                            
+                                            .book ul li a,
+                                            .help ul li a{
+                                              text-decoration: none;
+                                              color: #FFF0F5;
+                                             }
+                                            

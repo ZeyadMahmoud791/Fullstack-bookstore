@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link href="/CSS/SignUp.css" rel="stylesheet" >
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="form">
+        <form method="post" action="http://localhost:5500/Users">
+            <h2>Sign up for Bookworm</h2>
+            <hr> <br>
+
+            <h5>First Name</h5>
+            <input name="fname" type="text" placeholder="First Name" class="names" required>
+
+            <h5>Last Name</h5>
+            <input name="lname" type="text" placeholder="Last Name" class="names" required aria-label="required">
+
+            <h5>Email</h5>
+            <input name="email" type="email" placeholder="Your E-mail" class="mail"required>
+
+            <h5>Password</h5>
+            <input name="password" id="password1" type="password" placeholder="Your Password" class="mail" minlength="3" maxlenght="10" required >
+
+            <h5>Confirm Password</h5>
+            <input id="password2" type="password" placeholder="Re-Enter Your Password" class="mail" minlength="3" required>
+
+            <div class="gender">
+                <label class="genderc">Gender:&emsp;</label>
+                <input name="gender" type="radio" id="female" value="female">
+                <label for="female" class="genderc">Female&ensp;</label>
+                <input name="gender" type="radio" id="male" value="male">
+                <label for="male" class="genderc">Male</label>
+            </div>
+            <button onclick="check()" class="button">Sign Up</button>
+        </form>
+    </div>
+    <!-- <script src="/JAVASCRIPT/signUp.js"></script> -->
+</body>
+
+</html>

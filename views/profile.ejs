@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link href="/CSS/profile.css" rel="stylesheet">
+    <title>BOOKWORM</title>
+</head>
+    <header>
+      <div class="logot" onclick="window.location.href = '/HomePage';">
+        <img src="/Images/book.png" >
+        <h2 class="brandn">BOOKWORM</h2>
+      </div>
+    
+      <div class="menuDiv circle">
+        <ul id="topMenu">
+          <li class="lt"><a href="/HomePage">Home</a></li>
+          <li><a href="/Categories">Categories</a></li>
+          <li><a href="/topSellers">Top Sellers</a></li>
+          <li><a href="/AboutUs">About us</a></li>
+          <li class="rt"><a href="/ContactUs">Contact us</a></li>
+        </ul>
+      </div>
+     
+      <div class="profile">
+        <form>
+          <input class="search" type="text" name="Search" id="" placeholder="Search">
+          <button class="simg" type="submit"><img src="/Images/search.png" alt=""></button>
+        </form>
+        
+        <div class="dropdown">
+          <a href="/profile"><img class="prof_photo" src="/Images/profile.png" alt="profile"></a>
+          <div class="dropdown-content">
+            <a class="t" href="profile.html">Profile</a>
+            <a class="m" href="/SignOut">Sign Out</a>
+            <a class="b" href="cart">Cart</a>
+          </div>
+        </div>
+        <div class="cart">
+        <a href="/cart"><img class="cart_photo" src="/Images/cart.png"></a>
+        </div>
+      </div>
+      
+    </header>
+<body>
+    <div class="form">
+        <h2>My Profile</h2>
+        <hr> <br>
+        <form method="get">
+            <h5>Username</h5>
+            <p><%=customer.fname%> <%=customer.lname%></p>
+            <br>
+            <h5>Email</h5>
+            <p><%=customer.email%></p>
+            <br>
+            <h5>Spent</h5>
+            <p><%=spent.toFixed(2);%> $</p>
+            
+           
+        </form>
+      
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BOOKWORM</title>
+  <link href="/CSS/cart.css" rel="stylesheet" >
+</head>
+
+<body>
+<script src="/JAVASCRIPT/cart.js"></script>
+<header>
+  <div class="logot" onclick="window.location.href = '/HomePage';">
+    <img src="/Images/book.png" >
+    <h2 class="brandn">BOOKWORM</h2>
+  </div>
+
+  <div class="menuDiv circle">
+    <ul id="topMenu">
+      <li class="lt"><a href="/HomePage">Home</a></li>
+      <li><a href="/Categories">Categories</a></li>
+      <li><a href="/topSellers">Top Sellers</a></li>
+      <li><a href="/AboutUs">About us</a></li>
+      <li class="rt"><a href="/ContactUs">Contact us</a></li>
+    </ul>
+  </div>
+
+  <div class="profile">
+    <form>
+      <input class="search" type="text" name="Search" id="" placeholder="Search">
+      <button class="simg" type="submit"><img src="/Images/search.png" alt=""></button>
+    </form>
+        <div class="dropdown">
+        <a href="profile"><img class="prof_photo" src="/Images/profile.png" alt="profile"></a>
+        <div class="dropdown-content">
+          <a class="t" href="profile">Profile</a>
+          <a class="m" href="/SignOut">Sign Out</a>
+          <a class="b" href="cart">Cart</a>
+        </div>
+      </div>
+      <div class="cart">
+        <a href="cart"><img class="cart_photo" src="/Images/cart.png"></a>
+      </div>
+    </div>
+
+</header>
+<main>
+  <div class="view_wrap list-view" style="display: block;">
+    <%if (products.length < 20){ var x = products.length;} else{ var x = 20;} for(var i=0; i < x; i++){ %>
+        <div class="view_item">
+          <form action="/Product" method="post">
+          <div class="vi_left">
+            <input class="img" type="submit" style="background-image:url(<%=products[i].image%>);" value="" >
+          </div>
+          <input type="hidden" name="id" value=<%=products[i]._id%>>
+          </form>
+          <div class="vi_right">
+            <p class="title"><%=products[i].name%></p>
+            <p class="author">-<%=products[i].author%></p>
+            <form action="/remove" method='post' class="btns">
+              <input type="submit" class="btn1" value="Remove">
+              <%var PID =products[i]._id %> 
+              <p class="price"><%=products[i].price%>$</p>
+              <input type="hidden" name="id" value="<%= PID %>">
+              </form>
+              </div>
+            </div>
+        <%}%>
+      </div>
+<div class="main">
+     
+  
+  <section class="shopping-cart">
+      <div class="_grid cart-totals">
+        <div class="_column subtotal" id="subtotalCtr">
+          <div class="cart-totals-key">Subtotal</div>
+          <div class="cart-totals-value"><%=total%> $</div>
+        </div>
+        <div class="_column shipping" id="shippingCtr">
+          <div class="cart-totals-key">Shipping</div>
+          <% var shipping = total / 10; %>
+          <div class="cart-totals-value"><%=shipping.toFixed(2);%> $</div>
+        </div>
+        <div class="_column total" id="totalCtr">
+          <div class="cart-totals-key">Total</div>
+          <% var finalTotal = total + shipping %>
+          <div class="cart-totals-value"><%=finalTotal.toFixed(2)%> $</div>
+        </div>
+    </div>
+    </section>
+  </div>
+  
+  <form class="_column checkout" id="text" action="/checkout" method="post">
+    <input type="submit" id="checkt" class="_btn checkout-btn entypo-forward" name="checkout" value="Check Out">
+  </form>
+    
+<footer>
+  <div class="about">
+    <h4>ABOUT BOOKWORM</h4>
+    <p>BOOKWORM began as an idea to help support bookstores and their communities at a time when more and more people were
+      buying their books online. We saw an opportunity to create an alternative to Amazon for socially-conscious online
+      shoppers.</p>
+    <h3 class="cont">Telephone: +20 111 937 7388</h3>
+    <h3 class="cont">Email: support@Book.com</h3>
+  </div>
+  <div class="book">
+    <h4>BOOKWORM</h4>
+    <ul>
+      <li><a href="/HomePage">Home</a></li>
+      <li><a href="Categories">Categories</a></li>
+      <li><a href="AboutUs">About Us</a></li>
+      <li><a href="ContactUs">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="help">
+    <h4>HELP AND SUPPORT</h4>
+    <ul>
+      <li><a href="#">Customer Service</a></li>
+      <li><a href="#">Shipping</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">Terms Of Service</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
